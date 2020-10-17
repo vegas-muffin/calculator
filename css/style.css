@@ -1,0 +1,287 @@
+@import url(buttons.css);
+@font-face {
+  font-family: "computo_monospaceregular";
+  src: url(../fonts/computomonospace-p73xo-webfont.woff2) format("woff2"),
+    url(../fonts/computomonospace-p73xo-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lcdsolid-vpzb";
+  src: url(../fonts/lcdsolid-vpzb-webfont.woff2) format("woff2"),
+    url(../fonts/lcdsolid-vpzb-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "green_screenregular";
+  src: url(../fonts/greenscr-webfont.woff2) format("woff2"),
+    url(../fonts/greenscr-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monotonregular";
+  src: url(../fonts/monoton-regular-webfont.woff2) format("woff2"),
+    url(../fonts/monoton-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "black_ops_oneregular";
+  src: url(../fonts/blackopsone-regular-webfont.woff2) format("woff2"),
+    url(../fonts/blackopsone-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "press_start_2pregular";
+  src: url(../fonts/pressstart2p-regular-webfont.woff2) format("woff2"),
+    url(../fonts/pressstart2p-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #f7ddaa;
+}
+.calc {
+  margin: 1rem;
+}
+.digit-title {
+  color: #dcdcdc;
+  font-family: "computo_monospaceregular";
+  text-transform: uppercase;
+}
+.input-box {
+  background-color: #000;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-shadow: inset 0px 1px 0px #d4c3bc, 0px 10px 0px #4f4f4f;
+  box-shadow: inset 0px 1px 0px #d4c3bc, 0px 10px 0px #4f4f4f;
+  z-index: 2;
+}
+.input-box__up-row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.input-box__up-row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.input-box h1 {
+  font-family: "monotonregular";
+  color: #26ff26;
+  text-shadow: 0 0 20px #26ff26;
+}
+.battery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: #98867c 0.1rem solid;
+}
+.battery__box {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #7c5b48;
+}
+.battery__line {
+  width: 0.2rem;
+  background-color: #98867c;
+}
+.ref {
+  color: #696969;
+  text-transform: uppercase;
+  font-family: "computo_monospaceregular";
+  font-size: 0.8rem;
+}
+.minus {
+  background-image: url(../img/refresh.svg);
+  background-size: 4.2rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 2rem;
+}
+.display {
+  font-size: 4rem;
+  font-family: "lcdsolid-vpzb";
+  background-color: black;
+  color: #26ff26;
+  text-shadow: 0px 0px 50px #63e663;
+  text-align: right;
+  border-radius: 10px;
+  max-width: 50rem;
+}
+.box input {
+  font-family: "black_ops_oneregular";
+}
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+.calc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #d4c3bc;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-box-shadow: inset 0px 1px 0px #d4c3bc, 0px 15px 0px #c1ac9b;
+  box-shadow: inset 0px 1px 0px #d4c3bc, 0px 15px 0px #c1ac9b;
+  z-index: 0;
+}
+.buttons__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem;
+}
+.left-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-right: 1rem;
+}
+.centre-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.right-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: 1rem;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.font-small {
+  font-size: 1.5rem;
+}
+.box-item {
+  width: 6rem;
+  height: 6rem;
+}
+
+.description {
+  font-family: "Press Start 2P";
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+
+.description__items {
+  list-style-image: url(../img/robot.png);
+}
+
+.description__subitems {
+  list-style: decimal;
+}

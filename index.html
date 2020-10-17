@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Calc.js</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calc">
+        <div class="input-box">
+          <div class="input-box__up-row1">
+            <div class="digit-title">dual powered : solar battery</div>
+          </div>
+
+          <div class="input-box__up-row2">
+            <h1>{CALC.js}</h1>
+            <div class="battery">
+              <div class="battery__box"></div>
+              <span class="battery__line"></span>
+              <div class="battery__box"></div>
+              <span class="battery__line"></span>
+              <div class="battery__box"></div>
+              <span class="battery__line"></span>
+              <div class="battery__box"></div>
+            </div>
+          </div>
+          <div class="ref">Come with me if you want to calculate</div>
+          <form class="" name="form">
+            <input
+              disabled
+              id="display"
+              class="calc_display-input display"
+              type="text"
+              name="textview"
+              placeholder="hello!"
+            />
+          </form>
+        </div>
+        <div class="buttons">
+          <div class="buttons__inner">
+            <!-- left -->
+            <div class="left-panel">
+              <div class="column">                  
+                <div class="box-item"></div>
+                
+
+                <div class="box">
+                  <input
+                    id="ce"
+                    class="btn clearBtn"
+                    type="button"
+                    value="CE"
+                    onclick="clear()"
+                  />
+                </div>
+                <div class="box">
+                  <input
+                    id="c"
+                    class="btn-red clearBtn"
+                    type="button"
+                    value="C"
+                    onclick="clear()"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- centre -->
+            <div class="centre-panel">
+              <div class="row">
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="7"
+                  />
+                </div>
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="8"
+                  />
+                </div>
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="9"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="4"
+                  />
+                </div>
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="5"
+                  />
+                </div>
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="6"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="1"
+                  />
+                </div>
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="2"
+                  />
+                </div>
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="3"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    name="button"
+                    value="0"
+                  />
+                </div>
+                <div class="box">
+                  <input
+                    id="number"
+                    class="number btn"
+                    type="button"
+                    value="00"
+                  />
+                </div>
+                <div class="box">
+                  <input id="decimal" class="btn" type="button" value="." />
+                </div>
+              </div>
+            </div>
+            <div class="right-panel">
+              <div class="column">
+                <div class="box">
+                  <input class="operation btn-grey" type="button" value="*" />
+                </div>
+
+                <div class="box">
+                  <input class="operation btn-grey" type="button" value="+" />
+                </div>
+                <!-- minus -->
+                <div class="box">
+                  <input
+                    id="minus"
+                    class="minus btn-red"
+                    type="button"
+                    value="+ | -"
+                    onclick="minusPlus()"
+                  />
+                </div>
+
+                <div class="box">
+                  <input
+                    id="equal"
+                    class="operation btn-grey"
+                    type="button"
+                    value="="
+                  />
+                </div>
+              </div>
+              <div class="column">
+                <div class="box">
+                  <input class="operation btn-grey" type="button" value="/" />
+                </div>
+                <div class="box">
+                  <input class="operation btn-grey" type="button" value="-" />
+                </div>
+                <div class="box">
+                  <input
+                    class="operation btn-grey expo"
+                    type="button"
+                    value="^"
+                    onclick="operation('^')"
+                  />
+                </div>
+
+                <div class="box">
+                  <input
+                    class="sqroot btn-grey"
+                    type="button"
+                    value="√"
+                    onclick="sqroot()"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div lang="ru" id="description" class="description">
+        <h2 class="description__title">Инструкция.</h2>
+        <ul class="description__items">
+          <li> <strong>Замена знака:</strong>
+Вводите число, нажимаете на замену знака.</li>
+          <li><strong>Степень:</strong> 
+            <ol class="description__subitems">
+              <li>Сначала вводите первое число;</li>
+              <li>Нажимаете кнопку степени;</li>
+              <li>Потом на второе число;</li>
+              <li>Потом на равно.</li>
+            </ol>
+          </li>
+          <li><strong>Корень квадратный:</strong> 
+Сначала вводите число, потом нажимаете на кнопку корня - &radic;.</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
